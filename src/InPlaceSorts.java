@@ -1,5 +1,15 @@
 public class InPlaceSorts {
 
+    public static void bubbleSort(String[] list1) {
+        while (!checkSort(list1)) {
+            for (int i = 0; i < list1.length - 1; i++) {
+                if (list1[i].compareTo(list1[i + 1]) > 0) {
+                    swapString(list1, i, i + 1);
+                }
+            }
+        }
+    }
+
     public static void selectionSort(double[] list1) {
         int minPos = 0;
 
@@ -12,16 +22,6 @@ public class InPlaceSorts {
                     minPos = j;
                 }
                 swapDouble(list1, minPos, i);
-            }
-        }
-    }
-
-    public static void bubbleSort(String[] list1) {
-        while (!checkSort(list1)) {
-            for (int i = 0; i < list1.length - 1; i++) {
-                if (list1[i].compareTo(list1[i + 1]) > 0) {
-                    swapString(list1, i, i + 1);
-                }
             }
         }
     }
