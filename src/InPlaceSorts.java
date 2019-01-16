@@ -1,14 +1,15 @@
 public class InPlaceSorts {
 
     public static void selectionSort(double[] list1) {
+        int minPos = 0;
+
         for (int i = 0; i < list1.length-1; i++) {
             double minVal = list1[i];
-            int minPos = 0;
 
             for (int j = i + 1; j < list1.length; j++) {
                 if (list1[j] < minVal) {
                     minVal = list1[j];
-                    minPos = i;
+                    minPos = j;
                 }
                 swapDouble(list1, minPos, i);
             }
@@ -27,7 +28,7 @@ public class InPlaceSorts {
 
     public static void insertionSort(int[] list1) {
         for (int i = 1; i < list1.length; i++) {
-            for (int count = i; count < list1.length; count++) {
+            for (int count = i; count > 0; count--) {
                 if (list1[count] < list1[count-1]) {
                     swapInt(list1, count, count-1);
                 }

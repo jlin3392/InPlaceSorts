@@ -25,7 +25,7 @@ public class Runner {
         System.out.println("Time taken: " + StringTime);
 
 
-        //Selection sort with int[]
+        //Insertion sort with int[]
         int[] intArray = InPlaceSorts.randomIntGen(5);
         int[] intBefore = intArray;
 
@@ -48,7 +48,7 @@ public class Runner {
         intTime = System.nanoTime() - intTime;
         System.out.println("Time taken: " + intTime);
 
-        //Insertion Sort with double
+        //Selection Sort with double
         double[] doubleArray = InPlaceSorts.randomDoubleGen(5);
         double[] doubleBefore = doubleArray;
 
